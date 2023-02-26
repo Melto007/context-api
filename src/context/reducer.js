@@ -3,10 +3,10 @@ import {
     REMOVE_TODO
 } from './action.types'
 
-export default (state, action) => {
+export const todoReducer = (state, action) => {
     switch(action.type) {
         case ADD_TODO:
-            return [ ...state, action.payload ]
+            return [...state, action.payload]
         case REMOVE_TODO:
             return state.filter(todo => todo.id !== action.payload)
         default:
